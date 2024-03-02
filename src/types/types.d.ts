@@ -5,7 +5,7 @@ export interface CategoriesType {
   imagen: string;
   nivel: string;
   cat: string;
-  sub_menus?: Categories[];
+  sub_menus?: Array;
 }
 
 export interface Products {

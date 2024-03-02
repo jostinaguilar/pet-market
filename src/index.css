@@ -4,6 +4,6 @@
 
 @layer components {
   .link-nav {
-    @apply hover:text-blue-chill-500 transition duration-300 text-sm;
+    @apply text-sm font-semibold transition duration-300 hover:text-blue-chill-500;
   }
 }
