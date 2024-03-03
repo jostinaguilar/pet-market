@@ -21,13 +21,13 @@ export function ItemMenu({ name, submenu }: Props) {
   };
 
   return (
-    <li className="w-full">
+    <li className="w-full lg:w-auto lg:relative">
       <a
         href="#"
         className="flex flex-row items-center justify-between"
         onClick={handleToggleMenu}
       >
-        <div className="flex flex-row items-center gap-3 text-sm font-bold lg:flex-col">
+        <div className="flex flex-row items-center gap-3 text-sm font-bold lg:flex-col lg:gap-1">
           <img
             src={`/src/assets/categories/${name}.svg`}
             alt={name}
@@ -38,7 +38,7 @@ export function ItemMenu({ name, submenu }: Props) {
         {submenu.length > 0 && (
           <span
             className={clsx(
-              'rotate-0 text-pumpkin-600 transform duration-300 transition',
+              'rotate-0 text-pumpkin-600 duration-200 transition lg:hidden',
               {
                 'rotate-90': openMenu,
               }
@@ -49,19 +49,28 @@ export function ItemMenu({ name, submenu }: Props) {
         )}
       </a>
       {openMenu && submenu.length > 0 && (
-        <ul className="mt-2">
+        <ul
+          className={clsx(
+            'z-20 mt-2 lg:bg-gray-50 lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:py-2 lg:px-6 lg:rounded-lg',
+            {
+              'lg:flex lg:gap-4': submenu.some(
+                (el) => el.sub_menus.length != 0
+              ),
+            }
+          )}
+        >
           {submenu.map((subitem) => (
-            <li key={subitem.id} className="w-full pl-9">
+            <li key={subitem.id} className="w-full pl-9 lg:pl-0">
               <a
                 href="#"
-                className="inline-flex w-full py-1.5 text-xs items-center justify-between font-semibold text-zinc-800"
+                className="inline-flex w-full py-1.5 text-xs items-center justify-between font-semibold text-zinc-800 hover:text-pumpkin-500 transition duration-300 text-nowrap"
                 onClick={handleToggleSubmenu}
               >
                 {subitem.nom}
                 {subitem.sub_menus.length > 0 && (
                   <span
                     className={clsx(
-                      'inline-flex w-5 mr-1 transform duration-300 transition text-zinc-500',
+                      'inline-flex w-5 mr-1 duration-200 transition text-zinc-500 lg:hidden',
                       {
                         'rotate-90': openSubmenu,
                       }
@@ -75,7 +84,10 @@ export function ItemMenu({ name, submenu }: Props) {
                 <ul>
                   {subitem.sub_menus.map((item: CategoriesType) => (
                     <li key={item.id}>
-                      <a href="#" className="pl-5 text-xs">
+                      <a
+                        href="#"
+                        className="pl-5 text-xs lg:pl-0 hover:text-blue-chill-500"
+                      >
                         {item.nom}
                       </a>
                     </li>

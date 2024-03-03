@@ -31,6 +31,9 @@ export default {
           950: '#08262b',
         },
       },
+      flex: {
+        0: '0 0 100%',
+      },
     },
     fontFamily: {
       sans: ['DM Sans Variable', 'sans-serif'],

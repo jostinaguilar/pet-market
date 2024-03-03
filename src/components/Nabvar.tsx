@@ -1,14 +1,17 @@
+import { useSideMenu } from '../store/useSideMenu';
 import { CartIcon, MenuIcon, SearchIcon, UserIcon } from './ui/Icons';
 
 export function Navbar() {
+  const openSideMenu = useSideMenu((state) => state.openSideMenu);
+
   return (
     <nav className="w-full bg-pumpkin-700">
       <ul className="flex flex-row flex-wrap items-center justify-between max-w-screen-lg gap-4 px-5 py-4 mx-auto lg:gap-10">
         <li className="order-1">
           <div className="flex flex-row items-center gap-2 text-white">
-            <span className="lg:hidden">
+            <button onClick={openSideMenu} type="button" className="lg:hidden">
               <MenuIcon />
-            </span>
+            </button>
             <h2 className="text-2xl font-black lg:text-3xl">Pet Market</h2>
           </div>
         </li>
