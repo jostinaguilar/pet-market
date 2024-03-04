@@ -13,7 +13,7 @@ export function Navigation() {
     <>
       <nav
         className={clsx(
-          'fixed inset-0 z-10 overflow-hidden overflow-y-scroll bg-white w-72 -translate-x-full transition duration-500 lg:translate-x-0 lg:overflow-visible lg:w-full lg:static',
+          'fixed inset-0 overflow-hidden overflow-y-scroll bg-white w-72 -translate-x-full transition duration-500 lg:translate-x-0 lg:overflow-visible lg:w-full lg:static',
           {
             'translate-x-0': sideMenu === true,
           }
@@ -26,7 +26,7 @@ export function Navigation() {
           </button>
         </div>
         {isLoading && <div>Loading...</div>}
-        <ul className="flex flex-col items-start w-full max-w-screen-lg gap-4 px-5 py-4 mx-auto lg:justify-between lg:flex-row lg:items-center">
+        <ul className="flex flex-col items-start w-full max-w-screen-lg gap-4 px-5 py-4 mx-auto lex lg:justify-between lg:flex-row lg:items-center">
           {!isLoading &&
             data?.map((category) => (
               <ItemMenu

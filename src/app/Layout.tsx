@@ -9,7 +9,7 @@ interface Props {
 export function Layout({ children }: Props) {
   return (
     <>
-      <header className="z-20">
+      <header className="relative z-50">
         <Navbar />
         <Navigation />
       </header>

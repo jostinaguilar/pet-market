@@ -51,7 +51,7 @@ export function ItemMenu({ name, submenu }: Props) {
       {openMenu && submenu.length > 0 && (
         <ul
           className={clsx(
-            'z-20 mt-2 lg:bg-gray-50 lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:py-2 lg:px-6 lg:rounded-lg',
+            'mt-2 lg:bg-gray-50 lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:py-2 lg:px-6 lg:rounded-lg',
             {
               'lg:flex lg:gap-4': submenu.some(
                 (el) => el.sub_menus.length != 0
@@ -80,8 +80,13 @@ export function ItemMenu({ name, submenu }: Props) {
                   </span>
                 )}
               </a>
-              {openSubmenu && subitem.sub_menus.length > 0 && (
-                <ul>
+              {subitem.sub_menus.length > 0 && (
+                <ul
+                  className={clsx('lg:block', {
+                    hidden: !openSubmenu,
+                    block: openSubmenu,
+                  })}
+                >
                   {subitem.sub_menus.map((item: CategoriesType) => (
                     <li key={item.id}>
                       <a
