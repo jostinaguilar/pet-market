@@ -18,11 +18,17 @@ export function Home() {
               image={product.imagen}
               brand={product.marca}
               title={product.descrip}
-              price={product.precio}
+              price={parseFloat(product.precio)}
             />
           ))}
         </section>
       </section>
+      <a
+        href="#"
+        className="flex items-center justify-center px-3 py-2 mx-auto font-bold text-white transition duration-300 bg-black rounded-md w-60 hover:bg-zinc-900"
+      >
+        Ver todo
+      </a>
     </main>
   );
 }
