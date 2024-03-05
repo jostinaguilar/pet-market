@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Nabvar';
 import { Navigation } from '../components/Navigation';
 
@@ -14,6 +15,7 @@ export function Layout({ children }: Props) {
         <Navigation />
       </header>
       {children}
+      <Footer />
     </>
   );
 }

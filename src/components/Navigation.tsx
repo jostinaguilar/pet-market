@@ -13,7 +13,7 @@ export function Navigation() {
     <>
       <nav
         className={clsx(
-          'fixed inset-0 overflow-hidden overflow-y-scroll bg-white w-72 -translate-x-full transition duration-500 lg:translate-x-0 lg:overflow-visible lg:w-full lg:static',
+          'z-10 fixed inset-0 overflow-hidden overflow-y-scroll bg-white w-72 -translate-x-full transition duration-500 lg:translate-x-0 lg:overflow-visible lg:w-full lg:static',
           {
             'translate-x-0': sideMenu === true,
           }
@@ -38,7 +38,7 @@ export function Navigation() {
         </ul>
       </nav>
       {sideMenu && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-0"></div>
       )}
     </>
   );

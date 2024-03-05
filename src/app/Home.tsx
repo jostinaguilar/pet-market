@@ -8,9 +8,9 @@ export function Home() {
   return (
     <main className="max-w-screen-lg mx-auto lg:px-5">
       <CarouselHome />
-      <section className="py-5">
+      <section className="p-5 lg:px-0">
         <h2 className="py-5 text-2xl font-bold">Catálogo de productos</h2>
-        <section className="grid grid-cols-4 gap-5">
+        <section className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
           {isLoading && <div>Loading...</div>}
           {data?.slice(0, 8)?.map((product) => (
             <ProductCard
