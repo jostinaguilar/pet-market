@@ -1,4 +1,4 @@
-export interface CategoriesType {
+export interface CategoryType {
   id: string;
   nom: string;
   descrip: Descrip;
@@ -8,7 +8,7 @@ export interface CategoriesType {
   sub_menus?: Array;
 }
 
-export interface Products {
+export interface ProductType {
   id: string;
   marca: string;
   descrip: string;

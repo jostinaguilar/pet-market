@@ -38,7 +38,7 @@ export function ItemMenu({ name, submenu }: Props) {
         {submenu.length > 0 && (
           <span
             className={clsx(
-              'rotate-0 text-pumpkin-600 duration-200 transition lg:hidden',
+              'rotate-0 text-primay-600 duration-200 transition lg:hidden',
               {
                 'rotate-90': openMenu,
               }
@@ -63,7 +63,7 @@ export function ItemMenu({ name, submenu }: Props) {
             <li key={subitem.id} className="w-full pl-9 lg:pl-0">
               <a
                 href="#"
-                className="inline-flex w-full py-1.5 text-xs items-center justify-between font-semibold text-zinc-800 hover:text-pumpkin-500 transition duration-300 text-nowrap"
+                className="inline-flex w-full py-1.5 text-xs items-center justify-between font-semibold text-zinc-800 hover:text-primay-500 transition duration-300 text-nowrap"
                 onClick={handleToggleSubmenu}
               >
                 {subitem.nom}
@@ -91,7 +91,7 @@ export function ItemMenu({ name, submenu }: Props) {
                     <li key={item.id}>
                       <a
                         href="#"
-                        className="pl-5 text-xs lg:pl-0 hover:text-blue-chill-500"
+                        className="pl-5 text-xs lg:pl-0 hover:text-secondary-500"
                       >
                         {item.nom}
                       </a>

@@ -8,7 +8,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="mt-10 text-white bg-zinc-950">
+    <footer className="mt-10 text-white bg-zinc-800">
       <section className="flex flex-col justify-between max-w-screen-lg gap-4 p-5 mx-auto sm:flex-wrap sm:flex-row lg:flex-nowrap">
         <article className="flex flex-row gap-2 sm:w-2/5 lg:w-auto">
           <img src="/src/assets/more/truck.svg" alt="Envíos gratis" />
@@ -63,11 +63,11 @@ export function Footer() {
             <input
               type="text"
               placeholder="Ingresa tu email"
-              className="w-full px-3 py-2 text-sm text-white rounded-md bg-zinc-900 placeholder:text-zinc-500"
+              className="w-full px-3 py-2 text-sm text-white rounded-md bg-zinc-700 placeholder:text-zinc-500"
             />
             <button
               type="submit"
-              className="absolute rotate-90 right-2 text-zinc-700"
+              className="absolute rotate-90 right-2 text-zinc-500"
             >
               <PlaneIcon />
               <span className="sr-only">Enviar</span>

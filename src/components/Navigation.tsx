@@ -19,7 +19,7 @@ export function Navigation() {
           }
         )}
       >
-        <div className="sticky top-0 flex flex-row items-center justify-between p-5 text-white bg-pumpkin-700 lg:hidden">
+        <div className="sticky top-0 flex flex-row items-center justify-between p-5 text-white bg-primary-700 lg:hidden">
           <h2 className="text-2xl font-black lg:text-3xl">Pet Market</h2>
           <button onClick={closeSideMenu} type="button">
             <CloseIcon />
